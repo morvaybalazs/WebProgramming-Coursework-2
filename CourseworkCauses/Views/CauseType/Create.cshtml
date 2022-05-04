@@ -1,0 +1,30 @@
+﻿@model CourseworkCauses.Models.AddCauseTypeModel
+
+        <! ––create a cause page ––>
+
+
+<h1 class="text-center">Add a new type of cause</h1>
+
+<hr />
+
+        <! ––container for cause info input ––>
+
+<div class="post">
+    <form asp-action="AddCauseType" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Title">Title of new cause type</label>
+            <input asp-for="Title" class="form-control" placholder="Add Cause Type" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Short description of the new cause type</label>
+            <input asp-for="Description" class="form-control" placholder="Add Cause Type Description" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <! –submit button ––>
+
+        <button type="submit">Add Cause Type</button>
+    </form>
+</div>

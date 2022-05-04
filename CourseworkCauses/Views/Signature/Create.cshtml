@@ -1,0 +1,44 @@
+﻿
+@model CourseworkCauses.Models.SignatureModel
+
+<! ––create a signatue page ––>
+
+    <hr />
+    <h1 class="text-center">Sign This Cause Below</h1>
+    <hr />
+
+    <! ––displays cause being signed ––>
+
+    <div>
+        <div class="post">
+            <div class="row">
+                <h3>User: <span class="glyphicon glyphicon-user" aria-hidden="true"></span>@Model.Email</h3>
+                <h4>Title: @Model.CauseTitle</h4>
+                <p class="preview">@Model.CauseContent</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <! ––container for signatue input field ––>
+
+    <div class="post" id="cause-signature">
+        <div class="row">
+            <div id=" createSignature">
+                <div class="authorBlock">
+                    <h3>User:<span class="glyphicon glyphicon-user" aria-hidden="true"></span>@Model.Email</h3>
+                </div>
+                <form asp-action="AddSignature" method="post" id="addSignatureForm">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <textarea asp-for="SignatureContent" rows="5" class="form-control" placeholder="Write your signature here...."></textarea>
+                    </div>
+                    <button type="submit" id="submitSignatureBtn" class="btn btn-submitSignature">Sign</button>
+                    <input asp-for="AuthorId" type="hidden" />
+                    <input asp-for="CauseId" type="hidden" />
+                    <input asp-for="CauseTypeId" type="hidden" />
+                </form>
+            </div>
+        </div>
+    </div>

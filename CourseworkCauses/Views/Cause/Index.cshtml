@@ -1,0 +1,104 @@
+﻿@model CourseworkCauses.Models.CauseIndexModel
+<! ––cause display page ––>
+
+<hr />
+<h1 class="text-center">If You Aggree, Add Your Signature</h1>
+<hr />
+
+<! ––cause content ––>
+
+<div class="post">
+    <div class="row">
+        <h3>User: <span class="glyphicon glyphicon-user" aria-hidden="true"></span>@Model.AuthorEmail</h3>
+        <h4>Title: @Model.Title</h4>
+        <p class="preview">@Model.CauseContent  (Posted:@Model.TimeCreated)</p>
+
+        <! ––if user logged in displays the following ––>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="row">
+                <span>
+                    <a asp-controller="Signature" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-newSignature">
+                        Click To Sign
+                    </a>
+                </span>
+            </div>
+        }
+
+        <! –twitter share button ––>
+
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+
+<hr />
+
+        <! ––if there are signatures displays the following summary table of signatures ––>
+
+@if (Model.Signatures.Any())
+{
+    {
+        {
+            <table class="table table-hover">
+                <caption class="panel-heading text-left">Signatures Summary</caption>
+                <tbody>
+                    <tr>
+                        <th>User</th>
+                        <th>Signed</th>
+                    </tr>
+                    @foreach (var signatures in Model.Signatures)
+                    {
+                        <tr>
+                            <td>
+                                @signatures.Email
+                            </td>
+                            <td>
+                                @signatures.Created
+                            </td>
+                        </tr>
+                    }
+            </table>
+        }
+    }
+
+    <!--Search tab-->
+    <hr />
+    <div id="find" class="text-center">
+        <h1>Find <span class="glyphicon glyphicon-search" aria-hidden="true"></span></h1>
+        <form class="search-group row">
+            <div class="search-input">
+                <input id="mySearch" type="text" class="search" placeholder="Find a signature...">
+            </div>
+        </form>
+    </div>
+    <hr />
+    <h3 class="text-center"><button class="btn hide-button text-center">Hide or Show Signatures</button></h3>
+
+    <! ––signature detailed view including content ––>
+
+
+    foreach (var signatures in Model.Signatures)
+    {
+        <div class="signature">
+            <div class="post" id="cause-signature">
+                <div class="row">
+                    <h3>User: <span class="glyphicon glyphicon-user" aria-hidden="true"></span>@signatures.Email</h3>
+                    <p class="preview">@Html.Raw(signatures.SignatureContent)  (Posted:@signatures.Created)</p>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+else
+{
+    <! ––if no signatures displays this ––>
+
+    <div class="noSignatures">
+        <h3 class="text-center">
+            This cause is not signed yet.<br />
+        </h3>
+    </div>
+}

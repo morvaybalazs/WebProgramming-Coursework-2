@@ -1,0 +1,55 @@
+﻿@model CourseworkCauses.Models.CauseTypeTopicModel
+        <! ––if user logged in displays the following ––>
+
+<hr />
+
+<h1 class="text-center">@Model.CauseType.Name</h1>
+
+<! ––if user logged in displays the following create button ––>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <a class="btn btn-newCause" asp-controller="Cause"
+           asp-action="Create"
+           asp-route-id=@Model.CauseType.Id>
+            Create a Cause
+        </a>
+    </div>
+}
+
+<hr />
+
+<! –– if causes  exist displays following  ––>
+
+@if (Model.Causes.Any())
+{
+    <div class="container">
+
+        @foreach (var cause in Model.Causes)
+        {
+
+            <div class="card bg-info text-center">
+                <h4><b>Title: @cause.Title</b></h4>
+                <p>User: @cause.AuthorEmail</p>
+                <p>Created: @cause.TimeCreated</p>
+                <p>Number Of Signatures: @cause.SignaturesCount</p>
+                <button class="btn-info">
+                    <a asp-controller="Cause" asp-action="Index" asp-route-id="@cause.Id">
+                        Click To See
+                    </a>
+                </button>
+            </div>
+        }
+    </div>
+    <hr />
+}
+else
+{
+    <! ––if no cause exists displays following ––>
+
+    <h4 class="text-center">
+        There are no causes yet, click on the above button to add the first one!
+    </h4>
+    <hr />
+}

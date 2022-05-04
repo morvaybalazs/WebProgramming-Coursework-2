@@ -1,0 +1,19 @@
+﻿@model CourseworkCauses.Models.CauseTypeIndexModel
+
+<hr />
+        <! ––display cause type names and short description that are links leading to causes ––>
+
+@foreach (var causetype in Model.CauseTypeList)
+{
+
+    <div class="causetypeheader text-center">
+        <div class="">
+            <h3><b><a asp-controller="CauseType" asp-action="CauseTopic" asp-route-id="@causetype.Id">@causetype.Name</a></b></h3>
+            <h5>@causetype.Description</h5>
+        </div>
+    </div>
+    <hr />
+}
+
+
+

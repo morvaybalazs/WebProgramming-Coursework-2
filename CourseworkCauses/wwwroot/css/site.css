@@ -1,0 +1,362 @@
+﻿
+/* body */
+body {
+    background-color: #F4F4F9;
+    font-weight: 400;
+    color: #04724D;
+}
+
+h4 {
+    font-weight: 200;
+}
+
+.causetypeheader {
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px #B8DBD9;
+    padding: 5px;
+    float: none;
+}
+
+    .causetypeheader :link{
+        text-decoration:none;
+        color:black;
+    }
+
+/* card */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 300px;
+    float:left;
+    padding:15px;
+    margin:15px;
+    float:left
+}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+/* twitter button */
+
+    .twitter-share-button {
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+/* navbar */
+
+.navbar {
+    background-color: #B8DBD9;
+    font-size: 16px;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #B8DBD9 !important;
+    background-color: #04724D !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #04724D;
+    color: #04724D;
+}
+
+/* banner picture and contents */
+.banner {
+    color: white;
+    text-align: center;
+    padding: 100px;
+    margin: auto;
+    background-image: url('../images/mainpic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+    .banner h1 {
+        font-size: 50px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #B8DBD9;
+        padding: 20px;
+        margin-top: 80px,20px;
+    }
+
+    .banner p {
+        font-style: italic;
+        font-size: x-large;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* table */
+
+.table {
+    margin: 20px;
+    font-size: medium;
+    color: #04724D;
+}
+
+    .table a {
+        color: #04724D;
+        font-weight: 600;
+    }
+
+    .table a:hover {
+        color: mediumaquamarine;
+        font-weight: 600;
+    }
+
+/* input fields */
+
+input {
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 4px 0px grey;
+    line-height: 16px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* buttons */
+
+button {
+    margin: 10px;
+    width: auto;
+    background-color: #04724D;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 5px;
+}
+
+
+    button:hover {
+        background-color: lightgreen;
+        color: white;
+        text-decoration: none;
+    }
+
+/*home page content style */
+
+.container-fluid {
+    color: #04724D;
+    background-color: #F4F4F9;
+    text-align: center;
+    padding: 90px;
+    margin: 10px;
+}
+
+    .container-fluid h1 {
+        font-size: 30px;
+        text-align: center;
+        color: #04724D;
+    }
+
+    .container-fluid h2 {
+        font-size: 22px;
+        font-weight: 200;
+        padding: 20px;
+        text-align: center;
+        color: #04724D;
+    }
+
+    .container-fluid input {
+        border-radius: 10px;
+        background-color: white;
+        border: none;
+        box-shadow: 0px 0px 5px 0px grey;
+        line-height: 16px;
+        font-size: 14px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .container-fluid textarea {
+        border-radius: 10px;
+        resize: none;
+        background-color: white;
+        border: none;
+        box-shadow: 0px 0px 4px 0px grey;
+        line-height: 20px;
+        font-size: 16px;
+        padding: 10px;
+        margin-left: 5px;
+    }
+
+
+.green {
+    background-color: white;
+    color: #04724D;
+}
+
+.logo {
+    font-size: 65px;
+    color: #04724D;
+}
+
+/* carousel and contents style */
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #667574;
+    height: max-content;
+    margin-top: 60px
+}
+
+.carousel-indicators li {
+    border-color: #667574;
+}
+
+    .carousel-indicators li.active {
+        background-color: #667574;
+    }
+
+.item h4 {
+    margin: 60px 70px;
+}
+
+/* cause and signature style */
+#postList {
+    list-style: none;
+}
+
+#cause-signature {
+    background-color: #B5EF8A;
+    margin: 20px;
+}
+
+.btn-newSignature {
+    color: #04724D;
+    font-weight:600;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 35px;
+    box-shadow: 0px 0px 4px 0px grey;
+    width: max-content;
+    padding: 5px;
+}
+
+    .btn-newSignature :hover{
+        font-weight:600;
+    }
+
+.btn-newCause {
+    color: #04724D;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0px 0px 4px 0px grey;
+    width: max-content;
+    padding: 5px;
+    font-weight: 400;
+    text-align:center;
+    margin: 10px;
+}
+
+
+.post {
+    border-radius: 10px;
+    background-color: #B8DBD9;
+    width: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0px grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.post h3 {
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 20px;
+    box-shadow: 0px 0px 4px 0px grey;
+    width: max-content;
+    padding: 5px;
+}
+    .post h4 {
+        border-radius: 10px;
+        text-align: left;
+        margin-top: 0;
+        margin-left: 20px;
+        box-shadow: 0px 0px 4px 0px grey;
+        width: max-content;
+        padding: 5px;
+    }
+
+    .post p {
+        border-radius: 10px;
+        background-color: white;
+        width: auto;
+        color: grey;
+        height: 150px;
+        font-size: 15px;
+        text-align: left;
+        margin: 10px;
+        padding: 5px;
+    }
+
+.postText {
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    height: 120px;
+    resize: none;
+    color: grey;
+}
+
+textarea {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: none;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.signatures {
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px;
+    font-size: 20px;
+    padding: 10px;
+    width: max-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+
+/* contact/about us style */
+#contact {
+    margin-bottom: 50px;
+}
+
+#about-globe .glyphicon {
+    font-size: 100px;
+}
+
+/* footer style */
+.footer {
+    background-color: transparent;
+    padding: 30px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+}
+
+footer .glyphicon {
+    font-size: 50px;
+    color: #04724D;
+    margin-bottom: 30px;
+}
